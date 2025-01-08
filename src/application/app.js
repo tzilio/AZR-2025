@@ -23,7 +23,7 @@ db.connect((err) => {
 // Rota para listar produtos (com ou sem busca)
 router.get('/products', (req, res) => {
     let searchQuery = req.query.q;
-    let sql = 'SELECT * FROM produtos';
+    let sql = 'SELECT * FROM bearings';
     let params = [];
 
     // Se houver uma busca, adicionar a cláusula WHERE
