@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AZ Rolamentos - Soluções especializadas em rolamentos automotivos e industriais. Saiba mais sobre nossos produtos e peça seu orçamento online. Curitiba-PR. Entregas para todo o Brasil.">
+    <title>AZ Rolamentos</title>
+
+    <link rel="stylesheet" href="/css/styles-index.css">
+    <link rel="icon" href="/assets/images/icons/logo.jpeg" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/icons/logo.jpeg" type="image/png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+</head>
+<body>
+
+    <!-- Cabeçalho (Partial) -->
+    <%- include('partials/header') %>
+
+    <main>
+        <!-- Banner -->
+        <div class="banner">
+            <div class="container">
+                <div class="banner-inner">
+                    <div class="banner-content">
+                        <h1><b>Soluções para todos</b><br>os tipos de rolamentos </h1>
+                        <a href="#" class="theme-btn">Conferir</a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Produtos -->
+        <section id="upcoming-events">
+            <div class="container">
+                <h2 class="section-title">Conheça Nossos Rolamentos</h2>
+                <div id="upcoming-events-content">
+                    <div class="event">
+                        <img src="./assets/images/bearing-images/automotive_bearing_img.png" alt="Rolamentos automotivos da AZ Rolamentos">
+                        <h3>Rolamentos Automotivos</h3>
+                        <p>Trabalhamos com uma linha completa de rolamentos automotivos.</p>
+                        <a href="/products" class="btn">Saiba Mais</a>
+                    </div>
+                    <div class="event">
+                        <img src="./assets/images/bearing-images/bearing_01.jpg" alt="Rolamentos industriais da AZ Rolamentos">
+                        <h3>Rolamentos Industriais</h3>
+                        <p>Conheça nossa linha de rolamentos industriais para diversas aplicações.</p>
+                        <a href="/products" class="btn">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Seção de Localização -->
+        <section id="localizacao">
+            <h2 class="section-title">Localização</h2>
+            <hr class="divider" />
+            <div class="location-container">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.8470562095654!2d-49.262569823705086!3d-25.443376333422712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce45eda2b73e5%3A0xf46fd0f1c841fd84!2sAZ%20Rolamentos!5e0!3m2!1spt-BR!2sbr!4v1719006054402!5m2!1spt-BR!2sbr"
+                width="100%"
+                height="300"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de localização da AZ Rolamentos"
+                class="map-iframe"
+                ></iframe>
+                <div class="hours">
+                    <h3>Horário de Funcionamento</h3>
+                    <p>Segunda à Sexta: 08:00 - 18:00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Informações de Contato -->
+        <section id="contact-info">
+            <div class="container">
+                <h2 class="section-title">Informações de Contato</h2>
+                <hr class="divider" />
+                <div class="contact-cards">
+                    <!-- Card do Instagram -->
+                    <div class="contact-card">
+                        <a href="https://www.instagram.com/azrolamentos" target="_blank">
+                            <i class="fab fa-instagram fa-3x"></i> <!-- Ícone do Font Awesome -->
+                        </a>
+                        <a href="https://www.instagram.com/azrolamentos" target="_blank">Instagram</a>
+                    </div>
+                    <!-- Card do Facebook -->
+                    <div class="contact-card">
+                        <a href="https://www.facebook.com/azrolamentos" target="_blank">
+                            <i class="fab fa-facebook-f fa-3x"></i> <!-- Ícone do Font Awesome -->
+                        </a>
+                        <a href="https://www.facebook.com/azrolamentos" target="_blank">Facebook</a>
+                    </div>
+                    <!-- Card do WhatsApp -->
+                    <div class="contact-card">
+                        <a href="https://api.whatsapp.com/send?phone=5541992292928&text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Pode%20me%20ajudar%3F" target="_blank">
+                            <i class="fab fa-whatsapp fa-3x"></i> <!-- Ícone do Font Awesome -->
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=5541992292928&text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Pode%20me%20ajudar%3F" target="_blank">WhatsApp</a>
+                    </div>
+                </div>                    
+            </div>
+        </section>
+
+        <!-- Seção de Formulário de Contato -->
+        <section id="formulario-contato" class="form-section py-24 bg-gray-50">
+            <div class="contain">
+                <h2 class="section-title">Orçamento</h2>
+                <hr class="divider" />
+                <div class="wrapper">
+                    <div class="form">
+                        <h3 class="form-headline">Fale Conosco</h3>
+                        <form id="submit-form" onsubmit="return checkValidations();">
+                            <p>
+                                <input id="name" class="form-input" type="text" placeholder="Nome*" required>
+                                <small class="name-error" style="color: red;"></small>
+                            </p>
+                            <p>
+                                <input id="email" class="form-input" type="email" placeholder="Email*" required>
+                                <small class="email-error" style="color: red;"></small>
+                            </p>
+                            <p class="full-width">
+                                <textarea minlength="1" id="message" cols="30" rows="7" placeholder="Mensagem*" required></textarea>
+                                <small class="message-error" style="color: red;"></small>
+                            </p>
+                            <p class="full-width">
+                                <button type="submit" class="submit-btn">Enviar</button>
+                                <button type="reset" class="reset-btn" onclick="reset()">Limpar</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé (Partial) -->
+    <%- include('partials/footer') %>
+
+    <!-- Extras (Partial) -->
+    <%- include('partials/extras') %>
+
+    <script src="/scripts/buttons.js"></script>
+    <script src="/scripts/form.js"></script>
+</body>
+</html>
