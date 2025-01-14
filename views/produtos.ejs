@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AZ Rolamentos - Soluções especializadas em rolamentos automotivos e industriais. Saiba mais sobre nossos produtos e peça seu orçamento online.">
+  <title>AZ Rolamentos</title>
+  
+  <link rel="stylesheet" href="/css/styles-products.css">
+  <link rel="icon" href="/assets/images/icons/logo.jpeg" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/icons/logo.jpeg" type="image/png">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" async></script>
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main>
+    <section class="produtos-container">
+      <h1>Nossos Produtos</h1>
+
+      <!-- Formulário de filtro/busca -->
+      <form class="buscar-produtos" method="get" action="/produtos">
+        <!-- Campo de busca textual -->
+        <input type="text" name="q" placeholder="Buscar produtos..." value="<%= q %>">
+        
+        <!-- Filtro por marca gerado dinamicamente -->
+        <select name="marca">
+          <option value="todas" <%= marca === 'todas' ? 'selected' : '' %> >Todas as Marcas</option>
+          <% brands.forEach(function(item) { %>
+            <option value="<%= item %>" <%= marca === item ? 'selected' : '' %>><%= item %></option>
+          <% }); %>
+        </select>
+        
+        <!-- Filtro por tipo (primeira palavra da descrição) gerado dinamicamente -->
+        <select name="tipo">
+          <option value="todos" <%= tipo === 'todos' ? 'selected' : '' %> >Todos os Tipos</option>
+          <% types.forEach(function(item) { %>
+            <option value="<%= item %>" <%= tipo === item ? 'selected' : '' %>><%= item %></option>
+          <% }); %>
+        </select>
+        
+        <button type="submit">
+          <i class="fas fa-search"></i> Buscar
+        </button>
+      </form>
+
+      <!-- Lista de produtos -->
+      <div class="produtos-lista">
+        <% if (produtos.length > 0) { %>
+          <% produtos.forEach(produto => { %>
+            <div class="produto-item">
+              <!-- Exemplo: se houver imagem associada, use lazyload se desejado -->
+              <!-- <img class="lazyload" data-src="/assets/images/bearing-images/<%= produto.codigo %>.jpg" alt="<%= produto.descricao %>"> -->
+              <h3><%= produto.descricao %></h3>
+              <p>Marca: <%= produto.marca %></p>
+              <p>Unidade: <%= produto.und %></p>
+              <p>Saldo: <%= produto.saldo %></p>
+              <p>Valor: R$ <%= produto.valor %></p>
+            </div>
+          <% }); %>
+        <% } else { %>
+          <p>Nenhum produto encontrado. Utilize os filtros acima para realizar uma busca.</p>
+        <% } %>
+      </div>
+
+      <!-- Paginação -->
+      <div class="paginacao">
+        <% if (totalPages > 1) { %>
+          <% for (let i = 1; i <= totalPages; i++) { %>
+            <% if (i === currentPage) { %>
+              <span class="pagina atual"><%= i %></span>
+            <% } else { %>
+              <a class="pagina" href="/produtos?q=<%= q %>&marca=<%= marca %>&tipo=<%= tipo %>&page=<%= i %>"><%= i %></a>
+            <% } %>
+          <% } %>
+        <% } %>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
