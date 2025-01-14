@@ -18,7 +18,12 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
-// Rota para a página de produtos
+// Rota para catalogo que redireciona para produtos
+app.get('/catalogo', (req, res) => {
+    res.redirect('/produtos');
+});
+
+// Rota para a página de produtos (as rotas definidas no arquivo './src/application/app')
 const produtosRoutes = require('./src/application/app');
 app.use(produtosRoutes);
 
