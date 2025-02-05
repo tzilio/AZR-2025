@@ -22,7 +22,7 @@ h2, h3 {
 header {
     background-color: #031629;
     color: #fff;
-    padding: 2rem 12rem; 
+    padding: 2rem 12rem;
 }
 
 nav {
@@ -49,18 +49,18 @@ nav {
 .menu a {
     color: #FFF2E780;
     font-weight: bold;
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
     transition: color 0.3s;
 }
 
 .menu a:hover {
-    color: #f9b115; 
+    color: #f9b115;
 }
 
 .content-container {
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 30px; 
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .breadcrumb {
@@ -82,63 +82,6 @@ nav {
     color: #fff;
     font-weight: bold;
 }
-
-
-/* Responsividade para tamanhos menores */
-@media (max-width: 768px) {
-    header {
-        padding: 1.5rem 8rem;
-    }
-
-    .logo {
-        font-size: 1.75rem;
-    }
-
-    .menu a {
-        font-size: 1.15rem; 
-    }
-
-    .content-container {
-        padding: 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    header {
-        padding: 1.2rem 4rem;
-    }
-
-    .logo {
-        font-size: 1.5rem; 
-    }
-
-    .menu a {
-        font-size: 0.8rem;
-    }
-
-    .content-container {
-        padding: 1rem; 
-    }
-}
-
-@media (max-width: 400px) {
-    header {
-        padding: 1.2rem 4rem;
-    }
-
-    .logo {
-        font-size: 1.5rem; 
-    }
-
-    .menu a {
-        font-size: 0.6rem; 
-    }
-
-    .content-container {
-        padding: 1rem; 
-    }
-}
-
 
 /* Container de Produtos */
 .produtos-container {
@@ -239,8 +182,7 @@ nav {
     margin-top: 30px;
 }
 
-
-/* Seção de Rodapé */
+/* Rodapé */
 .footer-section {
     background-color: #020d18;
     color: #fff;
@@ -304,9 +246,10 @@ nav {
     margin: 0 10px;
     flex: 1;
     text-align: left;
-    margin-right: auto; 
+    margin-right: auto;
     margin-left: auto;
 }
+
 .footer-widget h3 {
     font-size: 20px;
     color: #f9b115;
@@ -323,10 +266,10 @@ nav {
 
 .social-media {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     height: 10vh;
-    margin: 0; 
+    margin: 0;
 }
 
 .footer-social-icon {
@@ -363,7 +306,6 @@ nav {
     color: #0077b5;
 }
 
-
 .footer-widget ul {
     list-style: none;
     padding: 0px;
@@ -387,8 +329,8 @@ nav {
 .subscribe-form {
     position: relative;
     overflow: hidden;
-    border-radius: 50px; /* Borda arredondada no contêiner */
-    background-color: #2E2E2E; /* Cor de fundo para o contêiner */
+    border-radius: 50px;
+    background-color: #2E2E2E;
 }
 
 .subscribe-form input {
@@ -398,7 +340,7 @@ nav {
     border: 1px solid #2E2E2E;
     color: #fff;
     border-radius: 50px 0 0 50px;
-    box-sizing: border-box; /* Inclui o padding e border no tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 .subscribe-form button {
@@ -408,8 +350,8 @@ nav {
     padding: 13px 20px;
     border: 1px solid #f9b115;
     top: 0;
-    border-radius: 0 50px 50px 0; /* Borda arredondada no lado direito */
-    box-sizing: border-box; /* Inclui o padding e border no tamanho total do elemento */
+    border-radius: 0 50px 50px 0;
+    box-sizing: border-box;
 }
 
 .subscribe-form button i {
@@ -445,7 +387,59 @@ nav {
     font-size: 12px;
 }
 
-/* Responsividade para tamanhos de tela menores */
+/* Botões Laterais */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: #25D366;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.whatsapp-icon i {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.whatsapp-icon:hover {
+    background-color: #1EBE54;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top i {
+    color: #000000;
+    font-size: 30px;
+}
+
+.back-to-top:hover {
+    opacity: 0.7;
+}
+
+/* Responsividade */
 @media (max-width: 1200px) {
     .single-cta {
         max-width: 250px;
@@ -454,7 +448,7 @@ nav {
     .footer-widget {
         max-width: 200px;
     }
-    
+
     .footer-widget h3 {
         font-size: 18px;
     }
@@ -531,14 +525,64 @@ nav {
 }
 
 @media (max-width: 768px) {
+    header {
+        padding: 1.5rem 8rem;
+    }
+
+    .logo {
+        font-size: 1.75rem;
+    }
+
+    .menu a {
+        font-size: 1.15rem;
+    }
+
+    .content-container {
+        padding: 25px;
+    }
+
+    .produtos-lista {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .produto-item img {
+        height: 150px;
+    }
+
+    .footer-cta {
+        padding: 20px 0;
+    }
+
+    .cta-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .single-cta {
-        max-width: 200px;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-content {
+        padding: 20px 0;
+    }
+
+    .content-row {
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-widget {
-        max-width: 150px;
+        max-width: 100%;
+        margin: 10px 0;
     }
-    
+
     .footer-widget h3 {
         font-size: 14px;
     }
@@ -573,7 +617,7 @@ nav {
     }
 
     .footer-social-icon i {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .footer-social-icon a {
@@ -586,192 +630,19 @@ nav {
 
     .subscribe-form input {
         max-width: 150px;
-        font-size: 10px; 
+        font-size: 10px;
     }
 
     .subscribe-form button {
-        width: 40px; 
+        width: 40px;
     }
 
     .subscribe-form button i {
         font-size: 18px;
     }
-}
 
-@media (max-width: 576px) {
-    .single-cta {
-        max-width: 125px;
-    }
-
-    .footer-widget {
-        max-width: 100px;
-    }
-    
-    .footer-widget h3 {
-        font-size: 12px;
-    }
-
-    .footer-text {
-        font-size: 10px;
-    }
-
-    .single-cta i {
-        font-size: 20px;
-    }
-
-    .cta-text h4 {
-        font-size: 10px;
-    }
-
-    .cta-text span {
-        font-size: 8px;
-    }
-
-    .footer-social-icon a {
-        font-size: 16px;
-    }
-
-    .footer-widget ul {
-        font-size: 10px;
-    }
-
-    .subscribe-form input,
-    .subscribe-form button {
-        font-size: 10px;
-    }
-
-    .footer-social-icon i {
-        font-size: 16px; /* Diminui ainda mais o tamanho da fonte em telas muito pequenas */
-    }
-
-    .footer-social-icon a {
-        margin-right: 15px; /* Reduz ainda mais o espaçamento entre os ícones */
-    }
-
-    .footer-bottom-content {
-        font-size: 11px;
-    }
-
-    .subscribe-form input {
-        max-width: 120px; /* Reduz ainda mais o tamanho do input */
-        font-size: 12px; /* Mantém a fonte menor */
-    }
-
-    .subscribe-form button {
-        width: 25px; /* Reduz ainda mais a largura do botão */
-    }
-
-    .subscribe-form button i {
-        font-size: 16px; /* Diminui o tamanho do ícone */
-    }
-}
-
-@media (max-width: 400px) {
-    .single-cta {
-        max-width: 100px;
-    }
-
-    .footer-widget {
-        max-width: 75px;
-    }
-    
-    .footer-widget h3 {
-        font-size: 12px;
-    }
-
-    .footer-text {
-        font-size: 10px;
-    }
-
-    .single-cta i {
-        font-size: 20px;
-    }
-
-    .cta-text h4 {
-        font-size: 10px;
-    }
-
-    .cta-text span {
-        font-size: 8px;
-    }
-
-    .footer-social-icon a {
-        font-size: 16px;
-    }
-
-    .footer-widget ul {
-        font-size: 10px;
-    }
-
-    .subscribe-form input,
-    .subscribe-form button {
-        font-size: 10px;
-    }
-
-    .footer-bottom-content {
-        font-size: 10px;
-    }
-}
-
-
-/* Botões Laterais */
-/* Botão WhatsApp */
-.whatsapp-icon {
-    position: fixed;
-    bottom: 90px; /* Ajuste essa posição conforme necessário */
-    right: 20px; /* Ajuste essa posição conforme necessário */
-    background-color: #25D366;
-    border: none;
-    width: 60px; /* Ajuste essa dimensão conforme necessário */
-    height: 60px; /* Ajuste essa dimensão conforme necessário */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.whatsapp-icon i {
-    color: #ffffff;
-    font-size: 30px;
-}
-
-.whatsapp-icon:hover {
-    background-color: #1EBE54;
-}
-
-/* Botão "Voltar ao Topo" */
-.back-to-top {
-    position: fixed; /* Mantém o elemento fixo na tela enquanto rola */
-    bottom: 20px; /* Distância da parte inferior da tela */
-    right: 20px; /* Distância da borda direita da tela */
-    width: 50px; /* Largura do quadrado */
-    height: 50px; /* Altura do quadrado */
-    background-color: #ffffff;
-    border: none;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.back-to-top i {
-    color: #000000;
-    font-size: 30px;
-}
-
-.back-to-top:hover {
-    opacity: 0.7; 
-}
-
-/* Media Queries para ajuste progressivo */
-@media (max-width: 768px) {
     .whatsapp-icon, .back-to-top {
-        width: 50px; /* Ajusta o tamanho para dispositivos móveis maiores */
+        width: 50px;
         height: 50px;
         right: 15px;
     }
@@ -782,20 +653,129 @@ nav {
 }
 
 @media (max-width: 480px) {
-    .whatsapp-icon, .back-to-top {
-        width: 40px; /* Ajusta o tamanho para dispositivos móveis menores */
-        height: 40px;
-        right: 10px;
+    header {
+        padding: 1.2rem 4rem;
     }
 
-    .whatsapp-icon i, .back-to-top i {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu a {
+        font-size: 0.8rem;
+    }
+
+    .content-container {
+        padding: 1rem;
+    }
+
+    .produto-item {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .produto-item img {
+        height: 120px;
+    }
+
+    .produto-info h3 {
+        font-size: 1rem;
+    }
+
+    .produto-info p {
+        font-size: 0.8rem;
+    }
+
+    .valor {
+        font-size: 0.9rem;
+    }
+
+    .footer-cta {
+        padding: 10px 0;
+    }
+
+    .cta-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .single-cta {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    .single-cta i {
         font-size: 20px;
     }
-}
 
-@media (max-width: 320px) {
+    .cta-text h4 {
+        font-size: 0.9rem;
+    }
+
+    .cta-text span {
+        font-size: 0.8rem;
+    }
+
+    .footer-content {
+        padding: 10px 0;
+    }
+
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-widget {
+        max-width: 100%;
+        margin: 5px 0;
+    }
+
+    .footer-widget h3 {
+        font-size: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+
+    .footer-social-icon a {
+        margin-right: 10px;
+    }
+
+    .footer-social-icon i {
+        font-size: 18px;
+    }
+
+    .subscribe-form input {
+        max-width: 120px;
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .subscribe-form button {
+        width: 30px;
+        padding: 8px;
+    }
+
+    .subscribe-form button i {
+        font-size: 16px;
+    }
+
+    .footer-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-menu ul li a {
+        font-size: 0.8rem;
+    }
+
+    .footer-bottom-content {
+        font-size: 0.7rem;
+    }
+
     .whatsapp-icon, .back-to-top {
-        width: 30px; /* Ajusta o tamanho para as menores telas */
+        width: 30px;
         height: 30px;
         right: 5px;
     }
@@ -804,21 +784,3 @@ nav {
         font-size: 15px;
     }
 }
-
-
-/* Animação do botão "Voltar ao Topo" */
-@keyframes bounceIn {
-    0% { opacity: 0; transform: translateY(20px); }
-    50% { opacity: 1; transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-.back-to-top {
-    animation: bounceIn 1s ease-out;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-
