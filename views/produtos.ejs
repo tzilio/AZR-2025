@@ -59,7 +59,7 @@
               <h3><%= produto.descricao %></h3>
               <p>Marca: <%= produto.marca %></p>
               <p>Unidade: <%= produto.und %></p>
-              <p>Saldo: <%= produto.saldo %></p>
+              <!--<p>Saldo: <%= produto.saldo %></p> -->
               <!--<p>Valor: R$ <%= produto.valor %></p> -->
             </div>
           <% }); %>
@@ -84,5 +84,9 @@
   </main>
 
   <%- include('partials/footer') %>
+
+  <script src="/scripts/buttons.js"></script>
+  <script src="/scripts/form.js"></script>
+
 </body>
 </html>
