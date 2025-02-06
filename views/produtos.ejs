@@ -36,7 +36,7 @@
           <% }); %>
         </select>
         
-        <!-- Filtro por tipo (primeira palavra da descrição) gerado dinamicamente -->
+        <!-- Filtro por tipo gerado dinamicamente -->
         <select name="tipo">
           <option value="todos" <%= tipo === 'todos' ? 'selected' : '' %> >Todos os Tipos</option>
           <% types.forEach(function(item) { %>
@@ -49,18 +49,18 @@
         </button>
       </form>
 
-      <!-- Lista de produtos -->
+      <!-- Lista de produtos ou mensagem solicitando a busca -->
       <div class="produtos-lista">
-        <% if (produtos.length > 0) { %>
+        <% if (!q || q.trim() === "") { %>
+          <p>Por favor, digite um termo de busca acima para visualizar os produtos.</p>
+        <% } else if (produtos.length > 0) { %>
           <% produtos.forEach(produto => { %>
             <div class="produto-item">
-              <!-- Exemplo: se houver imagem associada, você pode usar lazyload -->
+              <!-- Exemplo: Caso haja imagem associada, descomente a linha abaixo -->
               <!-- <img class="lazyload" data-src="/assets/images/bearing-images/<%= produto.codigo %>.jpg" alt="<%= produto.descricao %>"> -->
               <h3><%= produto.descricao %></h3>
               <p>Marca: <%= produto.marca %></p>
               <p>Unidade: <%= produto.und %></p>
-              <!--<p>Saldo: <%= produto.saldo %></p> -->
-              <!--<p>Valor: R$ <%= produto.valor %></p> -->
             </div>
           <% }); %>
         <% } else { %>
@@ -68,25 +68,47 @@
         <% } %>
       </div>
 
-      <!-- Paginação -->
+      <!-- Paginação (exibida apenas quando há um termo de busca) -->
+      <% if (q && q.trim() !== "" && totalPages > 1) { %>
       <div class="paginacao">
-        <% if (totalPages > 1) { %>
-          <% for (let i = 1; i <= totalPages; i++) { %>
-            <% if (i === currentPage) { %>
-              <span class="pagina atual"><%= i %></span>
-            <% } else { %>
-              <a class="pagina" href="/produtos?q=<%= q %>&marca=<%= marca %>&tipo=<%= tipo %>&page=<%= i %>"><%= i %></a>
-            <% } %>
+        <% for (let i = 1; i <= totalPages; i++) { %>
+          <% if (i === currentPage) { %>
+            <span class="pagina atual"><%= i %></span>
+          <% } else { %>
+            <a class="pagina" href="/produtos?q=<%= q %>&marca=<%= marca %>&tipo=<%= tipo %>&page=<%= i %>"><%= i %></a>
           <% } %>
         <% } %>
       </div>
+      <% } %>
     </section>
   </main>
 
-  <%- include('partials/footer') %>
+    <!-- Rodapé (Partial) -->
+    <%- include('partials/footer') %>
+
+    <!-- Extras (Partial) -->
+    <%- include('partials/extras') %>
 
   <script src="/scripts/buttons.js"></script>
   <script src="/scripts/form.js"></script>
+  
+  <!-- Script para tornar os cards clicáveis e exibir a confirmação para contato via WhatsApp -->
+  <script>
+    function handleCardClick(e) {
+      e.preventDefault();
+      if (confirm("Deseja contatar no WhatsApp?")) {
+        // Substitua o número abaixo pelo seu número no formato internacional (sem zeros ou sinais)
+        window.location.href = "hhttps://api.whatsapp.com/send?phone=5541992292928&text=Ol%C3%A1%2C%20visitei%20o%20site%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.%20Pode%20me%20ajudar%3F";
+      }
+    }
 
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.produto-item');
+      cards.forEach(function(card) {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', handleCardClick);
+      });
+    });
+  </script>
 </body>
 </html>
